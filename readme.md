@@ -1,9 +1,5 @@
 # Spring Boot Course - Learning Path
 
-![Spring Boot Logo](https://spring.io/images/favicon-9d250ca4d50036a2e6839c5ad99929d5.ico)
-
-This README outlines the topics and structure of the Spring Boot course, covering key concepts, tools, and best practices for building modern web applications. This course is divided into **12 weeks**, with each week focusing on a specific topic to ensure a comprehensive understanding of Spring Boot and related technologies.
-
 ---
 
 ## **1. Week 1: Introduction and Setup**
@@ -162,24 +158,10 @@ This README outlines the topics and structure of the Spring Boot course, coverin
   4. Homework
   5. Course summary and next steps
 
----
-
-## **Expected Skills After Completion**
-
-![Completion Icon](https://img.icons8.com/fluency/48/000000/checklist.png)
-
-- Understand and use Spring Boot for web application development.
-- Build RESTful APIs with Spring Boot.
-- Work with relational and NoSQL databases.
-- Write clean, testable, and maintainable code.
-- Implement design patterns and reactive programming.
-- Deploy applications to cloud platforms.
 
 ---
 
 ## **Author**
 
 This course was created by **Przemysław Bykowski**, an experienced software engineer and Spring Boot expert.
-
-Feel free to clone this repository and use it as a guide to track your progress throughout the course!
 
