@@ -16,6 +16,7 @@ public class InitService {
 
     @EventListener(ApplicationReadyEvent.class)
     public void get() {
+       
         studentRepo.deleteAll()
                 .thenMany(
                         Flux.just("Adam", "Ania", "Karol"))
@@ -25,4 +26,5 @@ public class InitService {
                 .thenMany(studentRepo.findAll())
                 .subscribe(System.out::println);
     }
+
 }
