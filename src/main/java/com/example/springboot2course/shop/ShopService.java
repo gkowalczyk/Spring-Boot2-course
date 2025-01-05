@@ -16,6 +16,10 @@ public abstract class ShopService {
         products = productGenerator.generateProduct(5);
 
     }
+    public boolean addProductToCart(Product product) {
+        return products.add(product);
+    }
+
     public double getTotalPrice() {
         return products.stream()
                 .mapToDouble(Product::price)
