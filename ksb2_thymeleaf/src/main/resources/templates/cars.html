@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Witaj w aplikacji Spring Boot</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Mark</th>
+        <th>Model</th>
+
+    </tr>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.mark}"></td>
+        <td th:text="${car.model}"></td>
+    <td>
+
+    <form th:action="@{/remove-car}"  method="post">
+        <input type = "hidden" name = "mark" th:value="${car.mark}">
+        <input type = "hidden" name = "model" th:value="${car.model}">
+        <button type="submit">Remove</button>
+    </form>
+
+
+        <form th:action="@{/update-car}" method="get">
+            <input type="hidden" name="mark" th:value="${car.mark}">
+            <input type="hidden" name="model" th:value="${car.model}">
+            <button type="submit">Update</button>
+        </form>
+
+
+    </td>
+    </tr>
+</table>
+
+    <form th:action="@{/add-car}" th:object="${newCar}" method="post">
+        <p>Model:<input type = "text" th:field="*{model}"></p>
+        <p>Mark:<input type = "text" th:field="*{mark}"></p>
+        <p><input type = "submit" value ="Add new car"></p>
+    </form>
+
+
+</body>
+</html>
