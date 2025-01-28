@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/cars")
+@CrossOrigin
 public class CarController {
 
     private final CarService carService;

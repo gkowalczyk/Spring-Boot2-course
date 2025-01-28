@@ -1,25 +1,19 @@
- import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CarList from "./component/CarList";
+import CarDetails from "./component/CarDetails";
+import AddCarForm from "./component/AddCarForm";
+import UpdateField from "./component/UpdateField";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ return (
+     <div>
+      <h1>Car API Frontend</h1>
+      <CarList />
+         <CarDetails />
+         <AddCarForm />
+         <UpdateField />
+     </div>
+ );
 }
 
 export default App;

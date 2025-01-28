@@ -11,7 +11,7 @@ import lombok.Data;
 
 public class Car{
 
-    @NotNull(message = "Id is required")
+   // @NotNull(message = "Id is required")
     @Min(value = 0, message = "Id should be greater than 0")
     @Max(value = Long.MAX_VALUE, message = "Id should be less than " + Long.MAX_VALUE)
     private Long id;
