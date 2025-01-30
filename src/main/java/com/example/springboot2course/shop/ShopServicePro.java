@@ -24,7 +24,7 @@ public class ShopServicePro extends ShopService {
 
     @Override
     public double getTotalPrice() {
-        return super.getTotalPrice() * tax * discount;
+        return (super.getTotalPrice() * tax) * 1 - discount;
 
     }
     @EventListener(ApplicationReadyEvent.class)
