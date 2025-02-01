@@ -1,14 +1,14 @@
 package com.example.weatherapiapp.controller;
-
 import com.example.weatherapiapp.client.WeatherClient;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@Data
+@RequiredArgsConstructor
 @CrossOrigin("*")
 @RequestMapping("/weather")
 public class WeatherController {
