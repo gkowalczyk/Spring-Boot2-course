@@ -33,6 +33,14 @@
   13. Quiz
   14. Homework
 
+## **Additional Tasks with Code Links**
+
+This section includes additional tasks from the course, completed during code reviews by the course author.
+
+### **Task 2: Code Review by Course Author**
+- **Description:** Task focusing on advanced dependency injection in Spring Boot.
+- **Link to Code:**  
+  [Task 2 Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/src/main/java/com/example/springboot2course/shop?fbclid=IwY2xjawIK8aVleHRuA2FlbQIxMAABHc-Nq1b2MSFCKj3mJ5jlw6mQenOmihTIR4IdMTNwdppoWb5ZVXtbPhGtrQ_aem_K4-0GeQtNZ3dY6cyhxX8KA)
 ---
 
 ## **3. Week 3: Building a REST API**
@@ -49,6 +57,12 @@
   9. Bonus: Using Swagger
   10. Bonus: Returning data in XML format
   11. Bonus: HATEOAS
+### **Task 3: Code Review by Course Author**
+- **Description:** REST API implementation for managing cars.
+- **Link to Backend Code:**  
+  [Task 3 Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/src/main/java/com/example/carapiapp?fbclid=IwY2xjawIK8dBleHRuA2FlbQIxMAABHbkhsS3y1p-tf5zLKz1YSQFtfqpViTI7qLOyIEHf-uThOTuRE_d01Z1O4w_aem_uHQ2L8sY68FEk6YRBVAy5w)
+- **Link to Frontend React Code:**  
+  [Task 3 Frontend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/carapi-frontend?fbclid=IwY2xjawIK8jVleHRuA2FlbQIxMAABHbkhsS3y1p-tf5zLKz1YSQFtfqpViTI7qLOyIEHf-uThOTuRE_d01Z1O4w_aem_uHQ2L8sY68FEk6YRBVAy5w)
 
 ---
 
@@ -61,6 +75,11 @@
   4. Thymeleaf and React
   5. Quiz
   6. Homework
+### **Task 4: Code Review by Course Author**
+- **Description:** Extending the car API functionality with additional features.
+- **Link to Backend Code:**  
+  [Task 4 Backend Code - Part 1](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/src/main/java/com/example/carapiapp?fbclid=IwY2xjawIK8dBleHRuA2FlbQIxMAABHbkhsS3y1p-)  
+  [Task 4 Backend Code - Part 2](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/src/main/java/com/example/carapiapp?fbclid=IwY2xjawIK8f1leHRuA2FlbQIxMAABHQuqnrtyh_MmnXRS0gsGkaXOB8tdg1oLoSRRkDNjVqQzNB7wVEQVoeF2kw_aem_HqznrzrjnNWFYeh5fYev7Q)
 
 ---
 
@@ -73,6 +92,12 @@
   4. Advanced HTTP clients
   5. Quiz
   6. Homework
+### **Task 5: Weather API Application**
+- **Description:** Build a weather application using Spring Boot (backend) and React (frontend).
+- **Link to Backend Code:**  
+  [Weather API Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiApp/src/main/java/com/example/weatherapiapp?fbclid=IwY2xjawIK8kRleHRuA2FlbQIxMAABHQuqnrtyh_MmnXRS0gsGkaXOB8tdg1oLoSRRkDNjVqQzNB7wVEQVoeF2kw_aem_HqznrzrjnNWFYeh5fYev7Q)
+- **Link to Frontend React Code:**  
+  [Weather API Frontend Code](https://github.com/gkowalczyk/Spring-Boot2-course/blob/main/WeatherApiApp/src/main/resources/frontend/weather-app/src/App.js?fbclid=IwY2xjawIK8k1leHRuA2FlbQIxMAABHV_Ii06mDTyNfAYFI03oGPGC8RrWB2vxGP5BWGlvVxgeUP4kGJ0rhGj_ig_aem_I7wNXoxmcx_t4hJQWbmVNA)
 
 ---
 
