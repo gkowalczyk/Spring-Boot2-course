@@ -79,7 +79,7 @@ This section includes additional tasks from the course, completed during code re
 - **Description:** Extending the car API functionality with additional features.
 - **Link to Backend Code:**  
   [Task 4 Backend Code - Part 1](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/src/main/java/com/example/carapiapp?fbclid=IwY2xjawIK8dBleHRuA2FlbQIxMAABHbkhsS3y1p-)  
-  [Task 4 Backend Code - Part 2](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/src/main/java/com/example/carapiapp?fbclid=IwY2xjawIK8f1leHRuA2FlbQIxMAABHQuqnrtyh_MmnXRS0gsGkaXOB8tdg1oLoSRRkDNjVqQzNB7wVEQVoeF2kw_aem_HqznrzrjnNWFYeh5fYev7Q)
+  [Task 4 Frontend Code - Part 2](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiApp/carapi-frontend)
 
 ---
 
