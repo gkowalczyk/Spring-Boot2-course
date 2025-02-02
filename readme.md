@@ -109,6 +109,11 @@ This section includes additional tasks from the course, completed during code re
   3. AOP annotations
   4. Quiz
   5. Homework
+### **Task 6:  Aspect-Oriented Programming**
+- **Description:** Write an application that provides a simple API interface. Anyone who calls the GET method will receive a list of movies (title, year, producer). Calling the POST method will allow adding a movie to the list and additionally trigger an EMAIL to be sent using an ASPECT.
+- **Link to Backend Code:**  
+  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/VideoApiApp/src/main/java/com/example/videoapiapp)
+
 
 ---
 
