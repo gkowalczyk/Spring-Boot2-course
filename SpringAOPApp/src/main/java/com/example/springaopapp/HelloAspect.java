@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class HelloAspect {
 
-      @Around("@annotation(HelloAspectAnnot))")
+    @Around("@annotation(HelloAspectAnnot))")
     public void aroundAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("Around advice");
         joinPoint.proceed();
@@ -32,7 +32,5 @@ public class HelloAspect {
     public void afterAdvice() {
         System.out.println("After advice");
     }*/
-
-
 
 }
