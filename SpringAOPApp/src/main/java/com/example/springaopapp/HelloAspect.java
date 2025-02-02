@@ -17,7 +17,6 @@ public class HelloAspect {
         System.out.println("Around advice");
         joinPoint.proceed();
     }
-
    /* @Before("execution(void com.example.springaopapp.Hello.sayHello())")
     public void beforeAdvice() {
         System.out.println("Before advice");
