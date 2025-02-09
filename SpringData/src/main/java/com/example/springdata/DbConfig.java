@@ -16,8 +16,8 @@ public class DbConfig {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.url("jdbc:mysql://localhost:3306/car_api_app");
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
-        dataSourceBuilder.username("root");
-        dataSourceBuilder.password("Kulamula!");
+        dataSourceBuilder.username("");
+        dataSourceBuilder.password("");
         return dataSourceBuilder.build();
     }
 
