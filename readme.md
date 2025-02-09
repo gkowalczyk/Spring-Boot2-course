@@ -127,6 +127,13 @@ This section includes additional tasks from the course, completed during code re
   5. Advanced DAO operations
   6. Quiz
   7. Homework
+### **Task 7:  Aspect-Oriented Programming**
+- **Description:** Write an application that allows adding and displaying vehicles from a database via a GUI. The vehicle should have fields to store the brand, model, color, and production date. Create a form that enables filtering and displaying vehicles within a specific date range, e.g., showing all vehicles in the database produced between 2010 and 2015.
+Write an application that fetches news from a selected API and saves it to the database. Create a GUI that allows browsing and editing the news entries.
+- **Link to Backend Code:**  
+  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiAppDb/src/main/java/com/example/carapiappdb)
+- **Link to Frontend React Code:**  
+  [Frontend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiAppDb/src/main/resources/static/car_api_db_frontend/src)
 
 ---
 
