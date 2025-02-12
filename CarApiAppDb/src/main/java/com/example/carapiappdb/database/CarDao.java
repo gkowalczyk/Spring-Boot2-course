@@ -9,11 +9,11 @@ import java.util.Map;
 public interface CarDao {
     List<Car> findAll(LocalDate dateFrom, LocalDate dateTo);
 
-    void addCar(String carBrand, String carModel, String carColor, LocalDate dataProduced);
+    Car addCar(Car car);
 
     Mono<List<String>> getCarNews();
 
     void updateNews(Long id, String description);
 
-    List<Map<String, Object>> getNewsFormDb();
+    List<Map<String, Object>> getNewsFromDb();
 }

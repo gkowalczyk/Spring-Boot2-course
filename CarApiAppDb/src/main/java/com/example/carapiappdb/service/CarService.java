@@ -16,7 +16,6 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
-@Data
 public class CarService implements CarDao {
 
     private List<Car> carList = new ArrayList<>();
@@ -48,10 +47,11 @@ public class CarService implements CarDao {
     }
 
     @Override
-    public void addCar(String carBrand, String carModel, String carColor, LocalDate dataProduced) {
-        Car car = new Car(carBrand, carModel, carColor, dataProduced);
+    public Car addCar(Car car) {
+
         String sql = "INSERT INTO CARS (car_brand, car_model, car_color, data_produced) VALUES (?, ?, ?, ?)";
         jdbcTemplate.update(sql, car.getBrand(), car.getModel(), car.getColor(), car.getDateProduced());
+        return car;
     }
 
     @Override
@@ -75,7 +75,7 @@ public class CarService implements CarDao {
     }
 
     @Override
-    public List<Map<String, Object>> getNewsFormDb() {
+    public List<Map<String, Object>> getNewsFromDb() {
         String sql = "SELECT news_id, description FROM NEWS";
         return jdbcTemplate.queryForList(sql);
     }

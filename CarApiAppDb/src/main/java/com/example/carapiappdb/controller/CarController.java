@@ -36,8 +36,8 @@ public class CarController {
 
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Car> addCar(@RequestBody Car car) {
-        carService.addCar(car.getBrand(), car.getModel(), car.getColor(), car.getDateProduced());
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        Car savedCar = carService.addCar(car);
+        return ResponseEntity.status(HttpStatus.CREATED).body(carService.addCar(savedCar));
     }
 
     @EventListener(ApplicationReadyEvent.class)
@@ -55,7 +55,7 @@ public class CarController {
 
     @GetMapping("/news/db")
     public ResponseEntity<List<Map<String, Object>>> getCarsNewsFromDb() {
-        return ResponseEntity.ok(carService.getNewsFormDb());
+        return ResponseEntity.ok(carService.getNewsFromDb());
     }
 }
 

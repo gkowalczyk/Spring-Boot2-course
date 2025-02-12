@@ -1,7 +1,6 @@
 package com.example.carapiappdb.domain;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,13 +12,14 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 public class Car{
 
-    @NotNull(message = "Id is required")
-    @Min(value = 0, message = "Id should be greater than 0")
-    @Max(value = Long.MAX_VALUE, message = "Id should be less than " + Long.MAX_VALUE)
     private Long id;
+    @NotBlank(message = "Brand is mandatory")
     private String brand;
+    @NotBlank(message = "Model is mandatory")
     private String model;
+    @NotBlank(message = "Color is mandatory")
     private String color;
+    @NotNull(message = "Date produced is mandatory")
     private LocalDate dateProduced;
 
     public Car(String brand, String model, String color, LocalDate dateProduced) {
