@@ -149,7 +149,7 @@ Write an application that fetches news from a selected API and saves it to the d
 ### **Task 8:  Databases II - Hibernate**
 - **Description:** Write an application that connects to a weather API and saves the current temperature information in a database every hour (use Hibernate or R2DBC).
 - **Link to Backend Code:**  
-  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiAppDb/src/main/java/com/example/carapiappdb)
+  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiAppR2dbc/src/main/java/com/example/weatherApiAppR2dbc)
 
 
 ---
