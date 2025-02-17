@@ -150,7 +150,11 @@ Write an application that fetches news from a selected API and saves it to the d
 - **Description:** Write an application that connects to a weather API and saves the current temperature information in a database every hour (use Hibernate or R2DBC).
 - **Link to Backend Code:**  
   [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiAppR2dbc/src/main/java/com/example/weatherApiAppR2dbc)
-
+- **Description:**  Write an Online Notebook – a graphical user interface (GUI) application that allows users to create notes, save them in a database, edit them later, and display them.
+- **Link to Backend Code:**  
+  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiAppR2dbc/src/main/java/com/example/weatherApiAppR2dbc)
+- **Link to Frontend React Code:**  
+  [Frontend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CarApiAppDb/src/main/resources/static/car_api_db_frontend/src)
 
 ---
 
