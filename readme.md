@@ -153,7 +153,7 @@ Write an application that fetches news from a selected API and saves it to the d
 ### **Online Notebook**
 - **Description:** Write an Online Notebook – a graphical user interface (GUI) application that allows users to create notes, save them in a database, edit them later, and display them.
 - **Link to Backend Code:**  
-  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiAppR2dbc/src/main/java/com/example/weatherApiAppR2dbc)
+  [Backend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/NoteOnlineApp/src/main/java/com/example/noteonlineapp)
 - **Link to Frontend React Code:**  
   [Frontend Code](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/NoteOnlineApp/src/main/resources/static/my-app/src)
 
