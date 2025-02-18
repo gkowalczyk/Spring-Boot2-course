@@ -27,8 +27,12 @@ public class WeatherService {
     private String apiAppKey;
     private final WeatherMapper weatherMapper;
     private final WeatherRepository weatherRepository;
-    private static final String CITY = "Wroclaw";
-    private final TransactionalOperator transactionalOperator;
+    private volatile String CITY = "Wroclaw";
+
+
+    public void setCITY(String CITY) {
+        this.CITY = CITY;
+    }
 
     public Mono<WeatherCardDto> getWeather(String city) {
         return webClient.get()
@@ -52,7 +56,7 @@ public class WeatherService {
     @Scheduled(cron = "*/5 * * * * *")
   //  @Scheduled(cron = "0 0 * * * *")
     public void saveWeatherToDb() {
-        getWeather(CITY)
+        getWeather(this.CITY)
                 .map(weatherMapper::toEntity)
                 .flatMap(weatherRepository::save)
                 .doOnSuccess(weatherCard -> log.info("Zapisano do bazy danych: {}", weatherCard))

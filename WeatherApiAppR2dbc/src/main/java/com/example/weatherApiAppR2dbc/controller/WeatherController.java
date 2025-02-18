@@ -20,4 +20,10 @@ public class WeatherController {
     public ResponseEntity<Mono<WeatherCardDto>> getWeather(@RequestParam String city) {
         return ResponseEntity.ok(weatherService.getWeather(city));
     }
+
+    @PostMapping("/set-newCity")
+    public ResponseEntity<String> setCity(@RequestParam String city) {
+        weatherService.setCITY(city);
+        return ResponseEntity.ok("Miasto zmienione na" + city);
+    }
 }

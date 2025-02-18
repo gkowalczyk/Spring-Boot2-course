@@ -15,8 +15,4 @@ public class CoreConfig {
                 .baseUrl("https://api.weatherbit.io/v2.0/current")
                 .build();
     }
-    @Bean
-    public TransactionalOperator transactionalOperator(ReactiveTransactionManager transactionManager) {
-        return TransactionalOperator.create(transactionManager);
-    }
-}
+   }
