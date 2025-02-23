@@ -170,6 +170,25 @@ Write an application that fetches news from a selected API and saves it to the d
   4. Bonus: Firebase integration
   5. Quiz
   6. Homework
+### **Task 9:  Databases III - NoSQL**
+### **Homework Assignment**
+1. Load **1000 objects** into the application from a **CSV file** generated using [Mockaroo](https://www.mockaroo.com/).
+2. Create a method that **saves all elements** to a local database.
+3. Implement an **aspect** that listens to the method execution:
+  - At the start of the operation, it should trigger a **time counter**.
+  - Once the operation is completed, it should log the **execution time**.
+4. Do the same for **reading data** from the database (**without displaying** it, as this could distort the results).
+5. Perform this experiment using **both a relational (SQL) and a non-relational (NoSQL) database**.
+6. **Compare the results** and document your findings.
+7. **Share your observations** with the group to discuss performance differences and insights.
+
+### **Performance Comparison**
+After executing the test:
+- MongoDB was **approximately 35-36% faster** than MySQL in write and read operations.
+- The additional overhead in MySQL comes from **ORM (Object-Relational Mapping)**, which introduces **extra processing time**.
+- **Link to Backend Code:**  
+  [Backend Code MONGO DB](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiAppR2dbc/src/main/java/com/example/weatherApiAppR2dbc)
+- [Backend Code MYSQL](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/NoteOnlineApp/src/main/java/com/example/noteonlineapp)
 
 ---
 
