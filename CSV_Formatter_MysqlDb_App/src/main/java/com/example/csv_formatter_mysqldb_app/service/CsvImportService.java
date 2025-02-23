@@ -23,7 +23,6 @@ import java.util.List;
 @Service
 public class CsvImportService {
 
-    List<Person> persons = new ArrayList<>();
     @Value("${csv.file.path}")
     private String csvFilePath;
     private final DataBaseService dataBaseService;
@@ -31,6 +30,7 @@ public class CsvImportService {
     @EventListener(ApplicationReadyEvent.class)
     @TimeCounterAspect
     public void importCsv() {
+        List<Person> persons = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(csvFilePath))) {
             CSVParser csvParser = new CSVParser(bufferedReader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
             csvParser.forEach(csvRecord -> {

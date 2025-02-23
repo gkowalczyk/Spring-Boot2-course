@@ -27,12 +27,12 @@ public class CsvImportService {
 
     @Value("${csv.file.path}")
     private String csvFilePath;
-    List<Person> persons = new ArrayList<>();
     private final PersonRepository personRepository;
 
     @EventListener(ApplicationReadyEvent.class)
     @TimeCounterAspect
     public void importCsv() {
+        List<Person> persons = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(csvFilePath))) {
             CSVParser csvParser = new CSVParser(bufferedReader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
             csvParser.forEach(csvRecord -> {
