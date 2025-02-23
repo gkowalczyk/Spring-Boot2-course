@@ -31,4 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-"SpringFirebase/src/main/resources/*.json" 
