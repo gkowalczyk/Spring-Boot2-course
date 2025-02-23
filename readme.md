@@ -186,9 +186,12 @@ Write an application that fetches news from a selected API and saves it to the d
 After executing the test:
 - MongoDB was **approximately 35-36% faster** than MySQL in write and read operations.
 - The additional overhead in MySQL comes from **ORM (Object-Relational Mapping)**, which introduces **extra processing time**.
+- - Below is a **graphical representation** of the performance comparison:
+
+![Performance Comparison](https://github.com/gkowalczyk/Spring-Boot2-course/blob/main/CSV_Formatter_MysqlDb_App/src/main/resources/wykes.png)
 - **Link to Backend Code:**  
-  [Backend Code MONGO DB](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/WeatherApiAppR2dbc/src/main/java/com/example/weatherApiAppR2dbc)
-- [Backend Code MYSQL](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/NoteOnlineApp/src/main/java/com/example/noteonlineapp)
+  [Backend Code MONGO DB](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CSV_Formatter_Mongo_DB_App/src/main/java/com/example/csv_formatter_mongo_db_app)
+- [Backend Code MYSQL](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CSV_Formatter_MysqlDb_App/src/main/java/com/example/csv_formatter_mysqldb_app)
 
 ---
 
