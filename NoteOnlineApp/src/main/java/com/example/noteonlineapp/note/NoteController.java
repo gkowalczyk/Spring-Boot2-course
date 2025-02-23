@@ -1,7 +1,5 @@
-package com.example.noteonlineapp.controller;
+package com.example.noteonlineapp.note;
 
-import com.example.noteonlineapp.model.Note;
-import com.example.noteonlineapp.service.NoteService;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +11,7 @@ import java.util.List;
 @Data
 @CrossOrigin("*")
 @RequestMapping("/note")
-public class NoteController {
+class NoteController {
     private final NoteService noteService;
 
     @GetMapping()

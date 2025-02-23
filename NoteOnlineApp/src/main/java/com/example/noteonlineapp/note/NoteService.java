@@ -1,17 +1,14 @@
-package com.example.noteonlineapp.service;
+package com.example.noteonlineapp.note;
 
-import com.example.noteonlineapp.model.Note;
-import com.example.noteonlineapp.repository.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class NoteService {
+class NoteService {
 
     private final NoteRepository noteRepository;
 

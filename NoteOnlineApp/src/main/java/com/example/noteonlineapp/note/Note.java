@@ -1,9 +1,8 @@
-package com.example.noteonlineapp.model;
+package com.example.noteonlineapp.note;
 
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +10,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Table(name = "notes")
 @Data
-public class Note {
+class Note {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
