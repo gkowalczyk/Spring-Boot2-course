@@ -1,8 +1,8 @@
 package com.example.weatherApiAppR2dbc.service;
 
 import com.example.weatherApiAppR2dbc.mapper.WeatherMapper;
-import com.example.weatherApiAppR2dbc.model.WeatherApiResponse;
-import com.example.weatherApiAppR2dbc.model.WeatherCardDto;
+import com.example.weatherApiAppR2dbc.modelDto.WeatherApiResponse;
+import com.example.weatherApiAppR2dbc.modelDto.WeatherCardDto;
 import com.example.weatherApiAppR2dbc.repository.WeatherRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.reactive.TransactionalOperator;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.core.publisher.Mono;
@@ -27,12 +26,8 @@ public class WeatherService {
     private String apiAppKey;
     private final WeatherMapper weatherMapper;
     private final WeatherRepository weatherRepository;
-    private volatile String CITY = "Wroclaw";
+    private final CityHolder cityHolder;
 
-
-    public void setCITY(String CITY) {
-        this.CITY = CITY;
-    }
 
     public Mono<WeatherCardDto> getWeather(String city) {
         return webClient.get()
@@ -56,7 +51,7 @@ public class WeatherService {
     @Scheduled(cron = "*/5 * * * * *")
   //  @Scheduled(cron = "0 0 * * * *")
     public void saveWeatherToDb() {
-        getWeather(this.CITY)
+        getWeather(cityHolder.getCity())
                 .map(weatherMapper::toEntity)
                 .flatMap(weatherRepository::save)
                 .doOnSuccess(weatherCard -> log.info("Zapisano do bazy danych: {}", weatherCard))
