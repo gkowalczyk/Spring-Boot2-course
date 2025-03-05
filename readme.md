@@ -197,6 +197,7 @@ After executing the test:
 
 ## **10. Week 10: Application Testing**
 
+
 - **Topics:**
   1. Test-driven development (TDD)
   2. Unit testing
@@ -204,7 +205,36 @@ After executing the test:
   4. End-to-end testing
   5. Quiz
   6. Homework
+### **Homework Assignment**
+# API Integration Testing and Application Expansion
 
+## ✅ Integration Tests
+Write **integration tests** to verify the correctness of the API developed in the past weeks. Ensure that all **GET, POST, PUT, and DELETE** methods work as intended, and that all exception handling cases are properly tested.  
+🔹 **Remember to use profiles!** 😊
+
+---
+
+## 🚀 Application Expansion
+### If your application stores **vehicles**, then:
+- Create a **service method** that:
+  - Retrieves all vehicles of a specified color from the database.
+  - Changes (repaints) their color to a randomly chosen one.
+- Write an appropriate **unit test** for this method.
+
+### If your application stores a **different type of entity (other than a vehicle)**:
+- Implement similar logic:
+  - Fetch elements from the database based on a given parameter.
+  - Randomly assign them a new value.
+
+---
+
+## 📝 Testing Guidelines
+🔹 **Unit tests** are sufficient to validate this functionality.  
+🔹 If you want to expose this functionality via the **API**, then **integration tests or E2E tests** will be required. 🚀
+
+- **Link to Backend Code:**  
+  [Backend Code MONGO DB](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CSV_Formatter_Mongo_DB_App/src/main/java/com/example/csv_formatter_mongo_db_app)
+- [Backend Code MYSQL](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CSV_Formatter_MysqlDb_App/s
 ---
 
 ## **11. Week 11: Design Patterns and Reactive Programming**
