@@ -18,8 +18,7 @@ class WebFluxApplicationTests {
         Mono.just("A")
                 .map(String::toUpperCase)
                 .map(s -> s + "B")
-                .subscribe(System.out::println);
-
+                .subscribe(System.out::println);// soat jest blokujące, mozna użyć log
     }
 
 }

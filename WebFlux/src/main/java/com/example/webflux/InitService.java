@@ -20,11 +20,11 @@ public class InitService {
         studentRepo.deleteAll()
                 .thenMany(
                         Flux.just("Adam", "Ania", "Karol"))
-                .map(name -> new Student(name))
+                .map(Student::new)
                // .map(studentRepo::save)
                .flatMap(studentRepo::save)
-                .thenMany(studentRepo.findAll())
-                .subscribe(System.out::println);
+                //.thenMany(studentRepo.findAll());
+                .subscribe();
     }
 
 }

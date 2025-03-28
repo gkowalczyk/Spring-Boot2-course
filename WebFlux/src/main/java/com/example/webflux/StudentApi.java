@@ -1,9 +1,9 @@
 package com.example.webflux;
 
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 
@@ -23,6 +23,16 @@ public class StudentApi {
      @GetMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
     public Flux<Student> get() {
        return studentRepo.findAll().delayElements(Duration.ofSeconds(1));
+    }
+
+    @PostMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    public Flux<Student> create(@RequestBody Student student) {
+        return studentRepo.save(student).thenMany(studentRepo.findAll());
+    }
+
+    @GetMapping(value = "/{surname}", produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    public Mono<Student> getById(@PathVariable String surname) {
+        return studentRepo.findStudentByName(surname);
     }
 
 }
