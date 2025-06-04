@@ -260,6 +260,56 @@ Write **integration tests** to verify the correctness of the API developed in th
   5. Course summary and next steps
 
 
+# Spring Security Learning Module
+
+This project demonstrates a practical introduction to Spring Security, covering key concepts such as user authentication, authorization, role-based access control, and login/logout handling.
+
+## 📘 Module 1  Topics
+
+### ✅ 1. Introduction to Spring Security
+- What is Spring Security?
+- Authentication vs Authorization
+
+### ✅ 2. Project Setup and Dependency Management
+- Adding the `spring-boot-starter-security` dependency
+- Defining the security configuration class
+
+### ✅ 3. User Definition
+- Using `InMemoryUserDetailsManager`
+- Creating users (`admin`, `user`) with roles
+- Encoding passwords using `BCryptPasswordEncoder`
+
+### ✅ 4. Role Management and Authorization
+- Restricting access using `.hasRole(...)`, `.hasAnyRole(...)`
+- Optional: `@PreAuthorize` annotations
+
+### ✅ 5. Granting Access to Endpoints
+| Endpoint       | Role Access         | Response                               |
+|----------------|---------------------|----------------------------------------|
+| `/admin`       | ADMIN only          | "Hello admin {name}"                   |
+| `/user`        | USER or ADMIN       | "Hello user {name}"                    |
+| `/anonymous`   | Everyone            | "Hello {name}" or "Hello stranger"     |
+| `/bye`         | Everyone            | "Goodbye"                              |
+
+### ✅ 6. Login Form and Logout Handling
+- Using the default Spring Security login page (`/login`)
+- Configuring custom `AuthenticationSuccessHandler`
+- Redirecting to `/bye` on logout
+
+### ✅ 7. Homework – Task 1 (Required)
+Implement the application with the following rules:
+- Admin has access to all endpoints
+- User has access to `/user`, `/anonymous`, and `/bye`
+- Unauthenticated users can access only `/anonymous` and `/bye`
+- All users should be redirected to `/bye` after logout
+- When a logged-in user accesses `/anonymous`, they should see `"Hello {name}"`
+
+### ✅ 8. Homework – Task 2 (Optional)
+Implement a **login counter** that tracks how many times each user has successfully logged in. Display this information in the endpoint responses.
+
+- **Link to Backend Code:**  
+  [Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/CSV_Formatter_Mongo_DB_App/src/main/java/com/example/csv_formatter_mongo_db_app)
+
 ---
 
 ## **Author**
