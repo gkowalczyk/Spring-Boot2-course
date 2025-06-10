@@ -264,7 +264,7 @@ Write **integration tests** to verify the correctness of the API developed in th
 
 This project demonstrates a practical introduction to Spring Security, covering key concepts such as user authentication, authorization, role-based access control, and login/logout handling.
 
-## 📘 Module 1  Topics
+## 📘 Module 1, 2 Topics
 
 ### ✅ 1. Introduction to Spring Security
 - What is Spring Security?
@@ -311,7 +311,66 @@ Implement a **login counter** that tracks how many times each user has successfu
   [Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m2/src/main/java/com/example/spring_security_m2)
 
 ---
+# 🌿 Spring Security – Module 3: User Management
 
+## 📋 Scope
+
+This module covers full user registration and session management flow in a Spring Boot security-based application.
+
+---
+
+## 🔹 Topics Covered
+
+- Introduction
+- Registration form
+- Storing users in a database
+- Activating users via email
+- Password reset mechanism
+- Session handling (browser side)
+- Session handling (database side)
+- Notes
+- Homework
+- Knowledge test
+
+---
+
+## ✅ Homework Task – Basic Version
+
+Implement a complete registration form allowing users to register with either a `User` or `Admin` role.
+
+### Requirements:
+
+- The user selects their role during registration.
+- Email confirmation is **always required** to activate the account.
+- If a user selects the `Admin` role:
+  - A notification email is sent to the **main administrator**.
+  - Until the administrator confirms via the activation link, the user has only `User` privileges.
+- Add example endpoints to **test the full flow** (registration, activation, login, session, etc.).
+- Automatically clean up expired or used **tokens** from the database.
+- Thoroughly **validate user input** – no invalid or unsafe data should get through.
+
+---
+
+## 💡 Ambitious Version (Bonus)
+
+In addition to the basic version:
+
+- Add a **custom login form** with an option to choose session duration:
+  - `7 days`, `21 days`, or `28 days`
+- Use **persistent tokens stored in the database** for `remember-me` sessions.
+- Ensure **email verification** is fully working and **required before login**.
+- Polish the frontend with:
+  - Friendly form validation
+  - Clear and accessible error feedback
+
+**Link to Backend Code:**  
+[Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m2/src/main/java/com/example/spring_security_m2)
+
+**Link to Frontend Code:**  
+[Frontend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m2/src/main/java/com/example/spring_security_m2)
+
+---
+  
 ## **Author**
 
 This course was created by **Przemysław Bykowski**, an experienced software engineer and Spring Boot expert.
