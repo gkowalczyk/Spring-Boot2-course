@@ -364,10 +364,13 @@ In addition to the basic version:
   - Clear and accessible error feedback
 
 **Link to Backend Code:**  
-[Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m2/src/main/java/com/example/spring_security_m2)
+[Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m3_hom/src/main/java/com/example/spring_security_m3_hom)
 
 **Link to Frontend Code:**  
-[Frontend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m2/src/main/java/com/example/spring_security_m2)
+[Frontend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_m3_hom/src/main/resources/static/my-app/src)
+
+![User Registration Preview](https://github.com/gkowalczyk/Spring-Boot2-course/raw/refs/heads/main/spring_security_m3_hom/src/main/resources/preview.bmp)
+
 
 ---
   
