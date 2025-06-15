@@ -52,7 +52,7 @@ public class UserService {
             String urlAdmin = "http://" + request.getServerName() + ":"
                     + request.getServerPort() +
                     request.getContextPath() +
-                    "/verifyAdmin-token?token=" + token;
+                    "/verifyAdmin-token?token=" + adminToken;
             mailCreatorService.sendMail(ADMIN_EMAIL,
                     "Admin Verification Token",
                     "Please click the link to verify your admin account: " + urlAdmin,
