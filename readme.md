@@ -372,6 +372,31 @@ In addition to the basic version:
 ![User Registration Preview](https://github.com/gkowalczyk/Spring-Boot2-course/raw/refs/heads/main/spring_security_m3_hom/src/main/resources/preview.bmp)
 
 
+
+# 🌿 Spring Security – Module 4: User Management: Hash Functions and Encoders**
+
+- **Topics:**
+  1. Introduction to hash module
+  2. What is a hash function?
+  3. Adding salt to the hash
+  4. The role of encoders in Spring Security
+  5. Overview of hashing algorithms based on BCrypt
+
+### **Task 4: Hash Function and BCrypt Exploration**
+- **Description:**  
+  This module introduces the concept of hashing in security, explains the need for salting, and discusses encoder strategies in Spring Security. It includes a practical breakdown of the `PasswordEncoder` interface and the BCrypt hashing algorithm with different cost factors.
+
+- **Hands-on:**
+  - Implementing your own `PasswordEncoder` with SHA-256 and salt
+  - Comparing security of SHA-256 vs BCrypt
+  - Breaking weak hashes using dictionary attacks
+  - Configuring encoder strategies in Spring Security
+
+
+**Link to Backend Code:**  
+[Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/blob/main/spring_security_m3_hom/src/main/java/com/example/spring_security_m3_hom/PersonalSha256PasswordEncoder.java)
+
+
 ---
   
 ## **Author**
