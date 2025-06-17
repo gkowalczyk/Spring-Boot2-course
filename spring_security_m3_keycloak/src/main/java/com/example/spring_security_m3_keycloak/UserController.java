@@ -34,8 +34,8 @@ public class UserController {
 
     @GetMapping("/debug")
     public Object debug(Authentication auth) {
-        System.out.println("👤 Auth: " + auth);
-        System.out.println("🔐 Authorities: " + auth.getAuthorities());
+        System.out.println("Auth: " + auth);
+        System.out.println(" Authorities: " + auth.getAuthorities());
         return Map.of(
                 "name", auth.getName(),
                 "authorities", auth.getAuthorities()
