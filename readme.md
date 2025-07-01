@@ -392,10 +392,43 @@ In addition to the basic version:
   - Breaking weak hashes using dictionary attacks
   - Configuring encoder strategies in Spring Security
 
-
 **Link to Backend Code:**  
 [Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/blob/main/spring_security_m3_hom/src/main/java/com/example/spring_security_m3_hom/PersonalSha256PasswordEncoder.java)
 
+
+# 🌿 Spring Security – Module 5: JWT Authentication with RSA
+
+- **Topics:**
+What is JWT (JSON Web Tokens)?
+1. Symmetric vs. asymmetric signing (HMAC vs. RSA).
+2. Generating and signing JWT tokens with a private RSA key.
+3. Sending JWT tokens in HTTP Authorization headers.
+
+ Configuring Spring Security to:
+1. Extract and verify JWT tokens using a public RSA key
+2. Populate the security context from JWT claims
+3. Stateless authentication architecture in Spring Boot
+
+✅ Homework Task: JWT Authentication
+
+Requirements:
+
+Client Application:
+Load private RSA key from a PEM file, 
+generate and sign JWT tokens using RS256, 
+send JWT tokens in requests with the Authorization: Bearer <token> header.
+
+Backend Application:
+Load the public RSA key from a PEM file for verifying JWT signatures,
+configure a JwtFilter to extract and validate tokens, 
+grant or deny access based on claims inside the JWT.
+
+
+**Link to Backend Code - Client:**  
+[Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_jwt_client/src/main/java/com/example/spring_security_jwt_client)
+
+**Link to Backend Code - API:**  
+[Backend Code - homework](https://github.com/gkowalczyk/Spring-Boot2-course/tree/main/spring_security_jwt/src/main/java/com/example/spring_security_jwt)
 
 ---
   
