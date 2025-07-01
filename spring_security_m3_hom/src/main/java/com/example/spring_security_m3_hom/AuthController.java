@@ -33,16 +33,25 @@ public class AuthController {
         userService.verifyAdminToken(token);
         return ResponseEntity.ok().build();
     }
-    @GetMapping("user")
-    public String forUser(Principal principal) {
 
+    @GetMapping("/user")
+    public String forUser(Principal principal) {
         return "This is for user:" + principal.getName();
     }
 
-    @GetMapping("admin")
+    @GetMapping("/admin")
     public String forAdmin(Principal principal) {
-
         return "This is for admin:" + principal.getName();
+    }
+
+    @GetMapping("/admin/data")
+    public String getAdminDataForTestingHttpMethod() {
+        return "This is admin data";
+    }
+
+    @PostMapping("/admin/data")
+    public void saveAdminDataForTestingHttpMethod() {
+        System.out.println("Admin data saved");
     }
 }
 

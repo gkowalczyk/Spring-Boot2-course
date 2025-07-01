@@ -34,7 +34,7 @@ public class UserService {
         VerificationToken verificationToken = new VerificationToken(token, appUser);
         verificationRepo.save(verificationToken);
 
-        String url = "http://" + request.getServerName() + ":"
+        String url = "https://" + request.getServerName() + ":"
                 + request.getServerPort() +
                 request.getContextPath() +
                 "/verify-token?token=" + token;
@@ -49,7 +49,7 @@ public class UserService {
             VerificationToken verificationTokenForAdmin = new VerificationToken(adminToken, appUser);
             verificationRepo.save(verificationTokenForAdmin);
 
-            String urlAdmin = "http://" + request.getServerName() + ":"
+            String urlAdmin = "https://" + request.getServerName() + ":"
                     + request.getServerPort() +
                     request.getContextPath() +
                     "/verifyAdmin-token?token=" + adminToken;

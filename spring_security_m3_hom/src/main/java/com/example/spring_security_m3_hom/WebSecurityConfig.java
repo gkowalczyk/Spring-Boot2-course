@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -60,7 +61,7 @@ public class WebSecurityConfig {
     public PersistentTokenRepository persistentTokenRepository(DataSource dataSource) {
         JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
         tokenRepository.setDataSource(dataSource);
-       // tokenRepository.setCreateTableOnStartup(true);
+        // tokenRepository.setCreateTableOnStartup(true);
         return tokenRepository;
     }
 
@@ -78,19 +79,22 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .httpBasic(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers("/verify-token","/verifyAdmin-token", "/register","/test").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/admin/data").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/admin/data").hasRole("ADMIN")
+                        .requestMatchers("/admin").hasRole("ADMIN")
+                        .requestMatchers("/user").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/verify-token", "/verifyAdmin-token", "/register", "/test").permitAll()
                         .requestMatchers("/login").permitAll())
                 .formLogin(form -> form
                         .successHandler((request, response, authentication) -> {
                             response.setStatus(HttpServletResponse.SC_OK);
                         }))
                 .rememberMe(r -> r
-                       .rememberMeServices(rememberMeServices(userDetailsService, persistentTokenRepository(dataSource))))
+                        .rememberMeServices(rememberMeServices(userDetailsService, persistentTokenRepository(dataSource))))
 
                 .logout(logout -> logout
                         .logoutSuccessUrl("/bye")

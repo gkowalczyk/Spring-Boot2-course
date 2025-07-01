@@ -13,14 +13,14 @@ const LoginForm = () => {
         formData.append('remember-me', 'on');
         formData.append('remember-duration', rememberDays);
 
-        const res = await fetch('http://localhost:8080/login', {
+        const res = await fetch('https://localhost:443/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: formData,
             credentials: 'include'
         });
 
-        if (res.ok)  window.location.href = 'http://localhost:8080/user';
+        if (res.ok)  window.location.href = 'https://localhost:443/user';
     };
 
     return (
